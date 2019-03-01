@@ -1,0 +1,112 @@
+#grid-container {
+    display: grid;
+    background-color: ffffff;
+    grid-template-columns: repeat(6, auto);
+    /*           grid-template-rows: repeat(10, auto);
+           */
+    grid-gap: 1px;
+    width: 100%;
+}
+
+.element {
+    width: 100%;
+    height: 75px;
+    background-color: aliceblue;
+    transition: 0.1s;
+}
+
+.element:hover {
+    transform: scale(2);
+}
+
+.at_num {
+    font-size: 0.7em;
+    text-align: right;
+    font-family: courier new;
+    font-weight: 400;
+}
+
+.at_details {
+    font-family: sans-serif;
+    font-size: 0.5em;
+    text-align: center;
+}
+
+.symbol {
+    font-family: Impact;
+    font-size: 1.9em;
+    text-align: center;
+}
+
+.alkali-metal {
+    background-color: pink;
+    order: 1;
+}
+
+.alkali-earth {
+    background-color: orange;
+    order: 2;
+}
+
+.transition-metal {
+    background-color: yellow;
+    order: 3;
+}
+
+.basic-metal {
+    background-color: lightgreen;
+    order: 4;
+}
+
+.basic-metal:last-of-type {
+    border: 2px black solid;
+}
+
+.semi-metal {
+    background-color: lightblue;
+    order: 5;
+}
+
+.non-metal {
+    background-color: cornflowerblue;
+    order: 6;
+}
+
+.halogen {
+    background-color: turquoise;
+    order: 7;
+}
+
+.noble-gas {
+    background-color: fuchsia;
+    order: 8;
+}
+
+@media only screen and (min-width: 600px) {
+    #grid-container {
+        display: grid;
+        background-color: ffffff;
+        grid-template-columns: repeat(18, auto);
+        grid-template-rows: repeat(8, auto);
+        grid-gap: 1px;
+        width: 100%;
+    }
+    .element {
+        order: 0;
+    }
+    #he {
+        grid-column-start: 18;
+    }
+    #b {
+        grid-column-start: 13;
+    }
+    #al {
+        grid-column-start: 13;
+    }
+    #hf {
+        grid-column-start: 4;
+    }
+    #rf {
+        grid-column-start: 4;
+    }
+}
